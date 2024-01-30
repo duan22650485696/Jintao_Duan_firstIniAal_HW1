@@ -2,7 +2,7 @@ a {
     text-decoration: none;
 }
 
-ul li {
+ul li{
     list-style: none;
 }
 header {
@@ -14,12 +14,24 @@ header {
 header a img {
     margin-top: 50px;
     height: 50%;
-   
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    margin-top: -50px;
+}
+
+nav a {
+   text-decoration: none;
+   color: yellow;
+   font-size: 27px;
+   font-family: 'Rubik', sans-serif;
 }
 
 #main-section {
     background-image: url(../images/background\ image.png);
-    height: 100vh;
     background-size:cover;
 }
 
@@ -29,4 +41,5 @@ footer {
 }
 p {
     color: white;
+    font-family: 'Rubik', sans-serif;
 }
