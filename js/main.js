@@ -1,6 +1,10 @@
 (() => {
     const characterBox = document.querySelector("#character-box");
     const baseUrl = `https://swapi.dev/api`;
+    const movieTitle = document.querySelector("#movie-title");
+    const openingCrawl = document.querySelector("#opening-crawl");
+    const moviePoster = document.querySelector("#movie-poster");
+
 
     // Function to fetch characters
     function getCharacters() {
@@ -33,10 +37,6 @@
 
     // Function to fetch character info
     function getCharacterInfo(event) {
-        const movieTitle = document.querySelector("#movie-title");
-        const openingCrawl = document.querySelector("#opening-crawl");
-        const moviePoster = document.querySelector("#movie-poster");
-
         const filmUrl = event.target.dataset.link; // Use stored film URL
         const posterName = event.target.dataset.poster; // Use stored poster name
 
@@ -55,4 +55,15 @@
 
     // Initial call to fetch characters
     getCharacters();
+
+
+
+    // Hambugermenu
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('nav');
+
+    hamburger.addEventListener('click', () => {
+    nav.classList.toggle('show-nav');
+  });
+
 })();
