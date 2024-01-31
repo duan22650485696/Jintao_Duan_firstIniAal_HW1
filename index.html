@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Star Wars</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    
+    <script defer src="js/SplitText.js"></script>
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <div class="grid-con">
+      <header class="col-span-full">
+        <a href="#"><img src="images/star-wars-logo.svg" alt=""></a>
+        <button class="hamburger">&#9776;</button>
+        <nav>
+          <a href="#">HOME</a>
+          <a href="#">MORE</a>
+        </nav>
+      </header>
+      
+      <section id="main-section" class="col-span-full">
+      
+        <section class="col-span-full m-col-span-6" id="character-box">
+        </section>
+      
+        <section class="col-span-full" id="movie-box">
+
+          <div id="movie-details" class="col-span-full">
+            <img id="movie-poster" src="" alt="Movie Poster">
+            <p id="movie-title"></p>
+            <p id="opening-crawl" class="greensock"></p>
+          </div>
+        </section>
+      </section>
+      
+      <footer class="col-span-full">
+        <div id="footer-logo">
+          <a href="#"><img src="images/star-wars-logo.svg" alt="footer-logo"></a>
+        </div>
+
+        <div id="social-media">
+          <a href="#"><img src="images/facebook.png" alt="FB"></a>
+          <a href="#"><img src="images//instagram-4.png" alt="INS"></a>
+          <a href="#"><img src="images/twitter.png" alt="TW"></a>
+        </div>
+       
+      </footer>
+    </div>
+    
+  </body>
+
+</html>
