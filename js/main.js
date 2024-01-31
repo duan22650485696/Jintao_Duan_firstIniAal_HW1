@@ -19,11 +19,12 @@
                     const a = document.createElement("a");
                     a.textContent = character.name;
                     a.href = "#";
-                    a.dataset.link = character.films[0]; // Storing movie URL as dataset
-                    a.dataset.poster = `${character.name}.jpeg`; // Storing poster name as dataset
+                    a.dataset.link = character.films[0];
+                    a.dataset.poster = `${character.name}.jpeg`; 
+
                     a.addEventListener("click", function(event) {
                         event.preventDefault();
-                        getCharacterInfo(event); // Pass event to function
+                        getCharacterInfo(event);
                     });
                     li.appendChild(a);
                     characterBox.appendChild(li);
@@ -31,29 +32,24 @@
             })
             .catch(err => {
                 console.log(err);
-                // Handle error
             });
     }
 
     // Function to fetch character info
     function getCharacterInfo(event) {
-        const filmUrl = event.target.dataset.link; // Use stored film URL
-        const posterName = event.target.dataset.poster; // Use stored poster name
-
+        const filmUrl = event.target.dataset.link; 
+        const posterName = event.target.dataset.poster;
         fetch(filmUrl)
             .then(response => response.json())
             .then(function(film) {
                 movieTitle.textContent = film.title;
                 openingCrawl.textContent = film.opening_crawl;
-                moviePoster.src = `images/${posterName}`; // Use stored poster name
+                moviePoster.src = `images/${posterName}`;
             })
             .catch(error => {
                 console.log(error);
-                // Handle error
             });
     }
-
-    // Initial call to fetch characters
     getCharacters();
 
 
